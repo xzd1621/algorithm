@@ -1,0 +1,20 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+	int n;
+	while(cin>>n)
+	{
+		int a[n];
+		for(int i=0;i<n;i++)
+		cin>>a[i];
+		int count=0;
+		for(int i=1;i+1<n;i++)
+		{
+			if((a[i]>a[i-1]&&a[i]>a[i+1])||(a[i]<a[i-1]&&a[i]<a[i+1]))
+			count++;
+			}	
+			cout<<count<<"\n";
+	} 
+} 
